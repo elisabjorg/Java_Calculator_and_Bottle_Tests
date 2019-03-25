@@ -23,8 +23,17 @@ public class BottleTest {
     }
 
     @Test
+    public void canDrinkMore() {
+        bottle.drink();
+        bottle.drink();
+        bottle.drink();
+        assertEquals(70, bottle.volume());
+    }
+
+    @Test
     public void emptyBottle() {
-        assertEquals(0, bottle.empty());
+        bottle.empty();
+        assertEquals(0, bottle.volume());
     }
 
     @Test
